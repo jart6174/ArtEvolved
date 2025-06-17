@@ -1,0 +1,24 @@
+import React from "react";
+import CavePaintings from "./components/CavePaintings";
+import DigitalArt from "./components/DigitalArt";
+import GraffitiArt from "./components/GraffitiArt";
+import AIFashion from "./components/AIFashion";
+
+function App() {
+  return (
+    <div style={{ fontFamily: "Arial, sans-serif", padding: "2rem" }}>
+      <h1 style={{ textAlign: "center" }}>ArtEvolved</h1>
+      <p style={{ textAlign: "center", fontStyle: "italic" }}>
+        The journey of art & fashion across time.
+      </p>
+
+      <CavePaintings />
+      <DigitalArt />
+      <GraffitiArt />
+      <AIFashion />
+    </div>
+  );
+}
+
+export default App;
+

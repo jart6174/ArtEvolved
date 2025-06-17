@@ -1,0 +1,140 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  background: url("https://as1.ftcdn.net/v2/jpg/02/97/43/18/1000_F_297431854_2iQ2BktKUKX63nS4XmlulbagArEowXXp.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+h1, h2 {
+  font-family: 'Courier New', Courier, monospace;
+  color: #ff77ff;
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+}
+
+p {
+  color: #fff;
+  line-height: 1.6;
+}
+/* CRT mode styles */
+.crt {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  color: #0f0;
+  filter: contrast(1.2) brightness(0.8);
+}
+
+/* CRT effect */
+.crt {
+  background-color: black;
+  color: lime;
+  font-family: 'Courier New', monospace;
+  text-shadow: 0 0 3px #0f0, 0 0 6px #0f0;
+  animation: flicker 0.15s infinite;
+  filter: contrast(1.2) brightness(1.1) saturate(1.5);
+  position: relative; /* Needed for ::after to overlay */
+  overflow: hidden;
+}
+
+/* Flicker effect */
+@keyframes flicker {
+  0% { opacity: 1; }
+  5% { opacity: 0.9; }
+  10% { opacity: 1; }
+  15% { opacity: 0.95; }
+  20% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+/* CRT scanlines */
+.crt::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 255, 0, 0.05) 2px,
+    rgba(0, 0, 0, 0.05) 4px
+  );
+  pointer-events: none;
+  z-index: 999;
+}
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
