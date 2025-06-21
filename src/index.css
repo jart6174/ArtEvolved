@@ -26,7 +26,7 @@ body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   min-height: 100vh;
-  background: url("https://as1.ftcdn.net/v2/jpg/02/97/43/18/1000_F_297431854_2iQ2BktKUKX63nS4XmlulbagArEowXXp.jpg") no-repeat center center fixed;
+  background: url("https://images.unsplash.com/photo-1655841439659-0afc60676b70?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHx8") no-repeat center center fixed;
   background-size: cover;
   color: #fff;
 }
@@ -69,9 +69,9 @@ button:focus-visible {
   }
 }
 h1, h2 {
-  font-family: 'Courier New', Courier, monospace;
-  color: #ff77ff;
-  text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+  font-family: 'Courier New', Courier 'Times New Roman', Times, serif, monospace;
+  color: #ffffff;
+  text-shadow: 0 0 5px #008cff, 0 0 10px #0077ff;
 }
 
 p {
@@ -90,9 +90,9 @@ p {
 /* CRT effect */
 .crt {
   background-color: black;
-  color: lime;
+  color: rgb(0, 123, 255);
   font-family: 'Courier New', monospace;
-  text-shadow: 0 0 3px #0f0, 0 0 6px #0f0;
+  text-shadow: 0 0 3px rgb(0, 102, 255), 0 0 6px rgb(0, 102, 255);
   animation: flicker 0.15s infinite;
   filter: contrast(1.2) brightness(1.1) saturate(1.5);
   position: relative; /* Needed for ::after to overlay */

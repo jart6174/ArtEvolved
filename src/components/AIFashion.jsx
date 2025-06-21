@@ -17,7 +17,7 @@ function AIFashion() {
 
   return (
     <section style={{ margin: "2rem auto", textAlign: "center" }}>
-      <h2>AI-Generated Fashion 🤖👗</h2>
+      <h2>AI-Generated Fashion </h2>
       <img
         src={aiFashion}
         alt="AI Fashion"

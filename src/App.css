@@ -1,16 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CavePaintings from "./components/CavePaintings";
 import DigitalArt from "./components/DigitalArt";
 import GraffitiArt from "./components/GraffitiArt";
 import AIFashion from "./components/AIFashion";
 
 function App() {
+  const [text, setText] = useState("");
+  const fullText = "The journey of art & fashion across time.";
+  const speed = 50;
+
+  useEffect(() => {
+    let i = 0;
+    const typing = () => {
+      if (i < fullText.length) {
+        setText((prev) => prev + fullText.charAt(i));
+        i++;
+        setTimeout(typing, speed);
+      }
+    };
+    typing();
+  }, []);
+
   return (
     <div style={{ fontFamily: "Arial, sans-serif", padding: "2rem" }}>
       <h1 style={{ textAlign: "center" }}>ArtEvolved</h1>
-      <p style={{ textAlign: "center", fontStyle: "italic" }}>
-        The journey of art & fashion across time.
-      </p>
+      <p style={{ textAlign: "center", fontStyle: "italic" }}>{text}</p>
 
       <CavePaintings />
       <DigitalArt />
